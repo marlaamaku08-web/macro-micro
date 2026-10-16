@@ -1,0 +1,466 @@
+{
+  "generated_at": "2026-10-15T12:58:03+00:00",
+  "seed": 42,
+  "task": "PathMNIST 9-class colorectal histopathology tissue classification",
+  "class_names": [
+    "Adipose",
+    "Background",
+    "Debris",
+    "Lymphocytes",
+    "Mucus",
+    "Smooth muscle",
+    "Normal colon mucosa",
+    "Cancer-associated stroma",
+    "Colorectal adenocarcinoma epithelium"
+  ],
+  "data": {
+    "dataset_file": "pathmnist_64.npz",
+    "dataset_sha256": "1e7fc200dd5aac79f39f0da26178be801ffac8e6d59c8533e51acebae953745a",
+    "image_shape": [
+      64,
+      64,
+      3
+    ],
+    "train_size": 89996,
+    "val_size": 10004,
+    "test_size": 7180,
+    "test_set_fingerprint": "149f2ca212ff7097b72fe869aebd8441d7657b58805468b52cc6877c6852c926",
+    "test_set_subsampled": false,
+    "model_b_train_subset": 25000,
+    "train_class_counts": [
+      9366,
+      9509,
+      10360,
+      10401,
+      8006,
+      12182,
+      7886,
+      9401,
+      12885
+    ],
+    "subset_class_counts": [
+      2602,
+      2642,
+      2878,
+      2889,
+      2224,
+      3384,
+      2191,
+      2611,
+      3579
+    ],
+    "test_class_counts": [
+      1338,
+      847,
+      339,
+      634,
+      1035,
+      592,
+      741,
+      421,
+      1233
+    ],
+    "leakage_check": {
+      "train_test_exact_duplicates": 0,
+      "subset_test_exact_duplicates": 0
+    }
+  },
+  "models": {
+    "Model A — CNN": {
+      "accuracy": 0.8706128133704736,
+      "macro_precision": 0.8360740154345444,
+      "macro_recall": 0.8280075980682882,
+      "macro_f1": 0.8187910774375118,
+      "per_class": [
+        {
+          "class_id": 0,
+          "class_name": "Adipose",
+          "precision": 0.9191073919107392,
+          "recall": 0.9850523168908819,
+          "f1": 0.950937950937951,
+          "support": 1338
+        },
+        {
+          "class_id": 1,
+          "class_name": "Background",
+          "precision": 0.9216539717083787,
+          "recall": 1.0,
+          "f1": 0.9592298980747452,
+          "support": 847
+        },
+        {
+          "class_id": 2,
+          "class_name": "Debris",
+          "precision": 0.48111658456486045,
+          "recall": 0.8643067846607669,
+          "f1": 0.6181434599156118,
+          "support": 339
+        },
+        {
+          "class_id": 3,
+          "class_name": "Lymphocytes",
+          "precision": 0.9455370650529501,
+          "recall": 0.9858044164037855,
+          "f1": 0.9652509652509652,
+          "support": 634
+        },
+        {
+          "class_id": 4,
+          "class_name": "Mucus",
+          "precision": 0.9738339021615472,
+          "recall": 0.8270531400966183,
+          "f1": 0.8944618599791013,
+          "support": 1035
+        },
+        {
+          "class_id": 5,
+          "class_name": "Smooth muscle",
+          "precision": 0.7494908350305499,
+          "recall": 0.6216216216216216,
+          "f1": 0.6795937211449676,
+          "support": 592
+        },
+        {
+          "class_id": 6,
+          "class_name": "Normal colon mucosa",
+          "precision": 0.9235294117647059,
+          "recall": 0.8475033738191633,
+          "f1": 0.8838845883180858,
+          "support": 741
+        },
+        {
+          "class_id": 7,
+          "class_name": "Cancer-associated stroma",
+          "precision": 0.7074235807860262,
+          "recall": 0.3847980997624703,
+          "f1": 0.49846153846153846,
+          "support": 421
+        },
+        {
+          "class_id": 8,
+          "class_name": "Colorectal adenocarcinoma epithelium",
+          "precision": 0.9029733959311425,
+          "recall": 0.9359286293592863,
+          "f1": 0.9191557148546395,
+          "support": 1233
+        }
+      ],
+      "confusion_matrix": [
+        [
+          1318,
+          6,
+          0,
+          0,
+          1,
+          13,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          847,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          293,
+          0,
+          0,
+          35,
+          5,
+          2,
+          4
+        ],
+        [
+          0,
+          0,
+          4,
+          625,
+          0,
+          0,
+          2,
+          0,
+          3
+        ],
+        [
+          84,
+          66,
+          0,
+          0,
+          856,
+          1,
+          7,
+          13,
+          8
+        ],
+        [
+          25,
+          0,
+          117,
+          4,
+          13,
+          368,
+          12,
+          49,
+          4
+        ],
+        [
+          7,
+          0,
+          26,
+          15,
+          6,
+          2,
+          628,
+          0,
+          57
+        ],
+        [
+          0,
+          0,
+          131,
+          1,
+          0,
+          72,
+          7,
+          162,
+          48
+        ],
+        [
+          0,
+          0,
+          38,
+          16,
+          3,
+          0,
+          19,
+          3,
+          1154
+        ]
+      ],
+      "file": "pathmnist_model.keras",
+      "trained_on": "full train split (89,996 images) by train_pathmnist.py",
+      "architecture": [
+        "Model: \"sequential\"\n┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓\n┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃\n┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩\n│ conv2d (Conv2D)                 │ (None, 62, 62, 32)     │           896 │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ max_pooling2d (MaxPooling2D)    │ (None, 31, 31, 32)     │             0 │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ conv2d_1 (Conv2D)               │ (None, 29, 29, 64)     │        18,496 │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ max_pooling2d_1 (MaxPooling2D)  │ (None, 14, 14, 64)     │             0 │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ conv2d_2 (Conv2D)               │ (None, 12, 12, 128)    │        73,856 │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ max_pooling2d_2 (MaxPooling2D)  │ (None, 6, 6, 128)      │             0 │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ flatten (Flatten)               │ (None, 4608)           │             0 │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ dense (Dense)                   │ (None, 128)            │       589,952 │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ dropout (Dropout)               │ (None, 128)            │             0 │\n├─────────────────────────────────┼────────────────────────┼───────────────┤\n│ dense_1 (Dense)                 │ (None, 9)              │         1,161 │\n└─────────────────────────────────┴────────────────────────┴───────────────┘\n Total params: 2,053,085 (7.83 MB)\n Trainable params: 684,361 (2.61 MB)\n Non-trainable params: 0 (0.00 B)\n Optimizer params: 1,368,724 (5.22 MB)\n"
+      ],
+      "test_predictions_fingerprint": "ba12a5161e8bc04a09b1bb38dd176e4f5d6dcd5fdb4d084f1a34b249fd2df459"
+    },
+    "Model B — PCA + LogisticRegression": {
+      "accuracy": 0.6263231197771588,
+      "macro_precision": 0.5712722418211171,
+      "macro_recall": 0.5397501562637165,
+      "macro_f1": 0.5204915188488575,
+      "per_class": [
+        {
+          "class_id": 0,
+          "class_name": "Adipose",
+          "precision": 0.928172386272945,
+          "recall": 0.8692077727952168,
+          "f1": 0.8977228869162486,
+          "support": 1338
+        },
+        {
+          "class_id": 1,
+          "class_name": "Background",
+          "precision": 0.7663043478260869,
+          "recall": 0.9988193624557261,
+          "f1": 0.867247565351102,
+          "support": 847
+        },
+        {
+          "class_id": 2,
+          "class_name": "Debris",
+          "precision": 0.1873536299765808,
+          "recall": 0.2359882005899705,
+          "f1": 0.20887728459530025,
+          "support": 339
+        },
+        {
+          "class_id": 3,
+          "class_name": "Lymphocytes",
+          "precision": 0.5051428571428571,
+          "recall": 0.6971608832807571,
+          "f1": 0.585818422796554,
+          "support": 634
+        },
+        {
+          "class_id": 4,
+          "class_name": "Mucus",
+          "precision": 0.6881390593047034,
+          "recall": 0.6502415458937199,
+          "f1": 0.6686537506209638,
+          "support": 1035
+        },
+        {
+          "class_id": 5,
+          "class_name": "Smooth muscle",
+          "precision": 0.4142857142857143,
+          "recall": 0.4408783783783784,
+          "f1": 0.42716857610474634,
+          "support": 592
+        },
+        {
+          "class_id": 6,
+          "class_name": "Normal colon mucosa",
+          "precision": 0.5982142857142857,
+          "recall": 0.18083670715249664,
+          "f1": 0.277720207253886,
+          "support": 741
+        },
+        {
+          "class_id": 7,
+          "class_name": "Cancer-associated stroma",
+          "precision": 0.5217391304347826,
+          "recall": 0.0855106888361045,
+          "f1": 0.1469387755102041,
+          "support": 421
+        },
+        {
+          "class_id": 8,
+          "class_name": "Colorectal adenocarcinoma epithelium",
+          "precision": 0.5320987654320988,
+          "recall": 0.6991078669910786,
+          "f1": 0.6042762004907115,
+          "support": 1233
+        }
+      ],
+      "confusion_matrix": [
+        [
+          1163,
+          2,
+          0,
+          20,
+          149,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          846,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          80,
+          9,
+          0,
+          218,
+          0,
+          5,
+          27
+        ],
+        [
+          5,
+          2,
+          0,
+          442,
+          17,
+          0,
+          17,
+          0,
+          151
+        ],
+        [
+          74,
+          248,
+          1,
+          20,
+          673,
+          0,
+          7,
+          0,
+          12
+        ],
+        [
+          0,
+          0,
+          199,
+          58,
+          0,
+          261,
+          0,
+          15,
+          59
+        ],
+        [
+          1,
+          0,
+          6,
+          85,
+          88,
+          8,
+          134,
+          11,
+          408
+        ],
+        [
+          0,
+          0,
+          134,
+          6,
+          7,
+          135,
+          2,
+          36,
+          101
+        ],
+        [
+          9,
+          6,
+          7,
+          235,
+          44,
+          6,
+          62,
+          2,
+          862
+        ]
+      ],
+      "file": "pathmnist_logreg.pkl",
+      "trained_on": "stratified subset of 25,000 train images (seed 42)",
+      "architecture": [
+        "Pipeline:",
+        "  1. StandardScaler()",
+        "  2. PCA(n_components=100, svd_solver='randomized', random_state=42)",
+        "  3. LogisticRegression(C=1.0, max_iter=1000, random_state=42)  # multinomial (softmax) for 9 classes",
+        "Input: 64x64x3 image flattened to 12,288 features"
+      ],
+      "training_seconds": 9.472311019897461,
+      "pca_explained_variance": 0.689445972442627,
+      "logreg_iterations": 769,
+      "validation_accuracy": 0.5255897640943623,
+      "test_predictions_fingerprint": "1dbbe3b0ff006f466e685889dcc051bea07bfd56015b498af4022b3123d220ed"
+    }
+  },
+  "comparison": {
+    "winner": "Model A — CNN",
+    "runner_up": "Model B — PCA + LogisticRegression",
+    "criterion": "macro_f1 (tie-break: accuracy)",
+    "macro_f1_difference": 0.2982995585886543,
+    "accuracy_difference": 0.24428969359331476
+  },
+  "environment": {
+    "python": "3.12.15",
+    "numpy": "2.5.4",
+    "scikit_learn": "1.9.1",
+    "tensorflow": "2.21.0"
+  },
+  "runtime_seconds": 19.1
+}

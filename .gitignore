@@ -1,0 +1,15 @@
+.env
+db/*.db
+db/*.db-journal
+__pycache__/
+.venv*/
+.DS_Store
+archive/
+
+# Training dataset (~1 GB) — production runtime-д шаардлагагүй
+pathmnist_64.npz
+
+# Python generated files
+*.pyc
+*.pyo
+.pytest_cache/
